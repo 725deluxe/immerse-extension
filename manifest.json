@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Immerse — イマージョン学習プレイヤー",
+  "version": "1.0",
+  "description": "YouTube動画のABリピート・速度変更・学習ログ機能を追加します",
+  "permissions": ["storage", "tabs"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
